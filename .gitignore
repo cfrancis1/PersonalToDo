@@ -5,7 +5,7 @@
 /client/.pnp
 /server/node_modules
 /server/.pnp
-/.node_modules
+node_modules/
 .pnp.js
 
 # testing
