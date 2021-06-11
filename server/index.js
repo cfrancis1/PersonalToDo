@@ -28,7 +28,7 @@ app.get("/todolist", async(req, res) => {
     }
 });
 
-app.put("/todos/:id", async (req, res) => {
+app.put("/todolist/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const { description } = req.body;
@@ -43,7 +43,7 @@ app.put("/todos/:id", async (req, res) => {
         }
       });
 
-app.get("/todos/:id", async (req, res) => {
+app.get("/todolist/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const getOne = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id]);
@@ -53,7 +53,7 @@ app.get("/todos/:id", async (req, res) => {
     }
 });
 
-app.delete("/todos/:id", async (req, res) => {
+app.delete("/todolist/:id", async (req, res) => {
     try {
         const { id } = req.params;
         const deleteOne = await pool.query("DELETE FROM todo WHERE todo_id = $1", [id]);

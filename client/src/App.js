@@ -3,8 +3,8 @@ import "./App.css";
 
 //components
 
-import InputOne from "./InputOne";
-import ListAll from "./ListAll";
+import InputOne from "./Input";
+import ListAll from "./List";
 
 function App() {
   return (
